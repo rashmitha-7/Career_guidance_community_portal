@@ -18,7 +18,7 @@ const Home = () => {
           <Link to="/mentors" className="btn btn-outline-primary">Browse Mentors</Link>
         </div>
         <div className="col-md-6">
-          <img src="/career-image.png" alt="Career" className="img-fluid rounded" />
+          <img src="/career.jpg" alt="Career" className="img-fluid rounded" />
         </div>
       </div>
 

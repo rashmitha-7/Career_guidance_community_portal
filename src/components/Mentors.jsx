@@ -11,7 +11,7 @@ const Mentors = () => {
       <div className="row mt-4 gy-4">
         <div className="col-md-4">
           <div className="card shadow-sm p-3 text-center">
-            <img src="/mentor1.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
+            <img src="/john.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
             <h5 className="fw-bold mt-3">John Doe</h5>
             <p className="text-muted">Software Engineer at Google</p>
             <button className="btn btn-primary">View Profile</button>
