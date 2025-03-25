@@ -3,14 +3,14 @@ import { Card, Container, Row, Col, Form } from 'react-bootstrap';
 
 const CareerLibrary = () => {
   const categories = [
-    { name: 'Engineering', img: 'engineering-img' },
-    { name: 'Medical', img: 'medical-img' },
-    { name: 'Science', img: 'science-img' },
-    { name: 'Mathematics', img: 'maths-img' },
-    { name: 'Food and Agriculture', img: 'food-agri-img' },
-    { name: 'Sports', img: 'sports-img' },
-    { name: 'Government', img: 'govt-img' },
-    { name: 'Economics', img: 'economics-img' },
+    { name: 'Engineering', img: '/engineer.jpg' },
+    { name: 'Medical', img: '/medical.jpg' },
+    { name: 'Science', img: '/science.jpg' },
+    { name: 'Mathematics', img: '/maths.jpg' },
+    { name: 'Food and Agriculture', img: '/food and agriculture.jpg' },
+    { name: 'Sports', img: '/sports.jpg' },
+    { name: 'Government', img: '/government.jpg' },
+    { name: 'Economics', img: './economic.jpg' },
   ];
 
   return (

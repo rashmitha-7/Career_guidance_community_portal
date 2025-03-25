@@ -1,16 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Dashboard from "./pages/Dashboard";
-import Mentors from "./pages/Mentors";
-import Library from "./pages/Library";
-import Quiz from "./pages/Quiz";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Dashboard from "./components/Dashboard";
+import Mentors from "./components/Mentors";
+import Library from "./components/Library";
+import Quiz from "./components/Quiz";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
-import ForgotPassword from "./pages/ForgotPassword";
+import Profile from "./components/Profile";
+import Settings from "./components/Settings";
+import ForgotPassword from "./components/ForgotPassword";
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -25,10 +27,13 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/mentors" element={<Mentors />} />
           <Route path="/library" element={<Library />} />
+         
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/forgot-password" element={<ForgotPassword/>  } />         
+          <Route path="/forgot-password" element={<ForgotPassword/>  } />  
+       
+       
         </Routes>
       </div>
       
