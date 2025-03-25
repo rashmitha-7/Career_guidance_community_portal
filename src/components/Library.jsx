@@ -1,16 +1,17 @@
-import React from 'react';
-import { Card, Container, Row, Col, Form } from 'react-bootstrap';
+import React from "react";
+import { Card, Container, Row, Col, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const CareerLibrary = () => {
+const Library = () => {
   const categories = [
-    { name: 'Engineering', img: '/engineer.jpg' },
-    { name: 'Medical', img: '/medical.jpg' },
-    { name: 'Science', img: '/science.jpg' },
-    { name: 'Mathematics', img: '/maths.jpg' },
-    { name: 'Food and Agriculture', img: '/food and agriculture.jpg' },
-    { name: 'Sports', img: '/sports.jpg' },
-    { name: 'Government', img: '/government.jpg' },
-    { name: 'Economics', img: './economic.jpg' },
+    { name: "Engineering", img: "/engineer.jpg", path: "/engineering" },
+    { name: "Medical", img: "/medical.jpg", path: "/medical" },
+    { name: "Science", img: "/science.jpg", path: "/science" },
+    { name: "Mathematics", img: "/maths.jpg", path: "/mathematics" },
+    { name: "Economics", img: "/economic.jpg", path: "/economics" },
+    { name: "Food", img: "/food and agriculture.jpg", path: "/food" },
+    { name: "Sports", img: "/sports.jpg", path: "/sports" },
+    { name: "Government", img: "/government.jpg", path: "/government" },
   ];
 
   return (
@@ -27,10 +28,12 @@ const CareerLibrary = () => {
         {categories.map((category, index) => (
           <Col md={3} key={index} className="mb-4">
             <Card className="text-center">
-              <Card.Img variant="top" src={category.img} alt={category.name} />
-              <Card.Body>
-                <Card.Title>{category.name}</Card.Title>
-              </Card.Body>
+              <Link to={category.path} style={{ textDecoration: "none", color: "inherit" }}>
+                <Card.Img variant="top" src={category.img} alt={category.name} />
+                <Card.Body>
+                  <Card.Title>{category.name}</Card.Title>
+                </Card.Body>
+              </Link>
             </Card>
           </Col>
         ))}
@@ -39,4 +42,4 @@ const CareerLibrary = () => {
   );
 };
 
-export default CareerLibrary;
+export default Library;
