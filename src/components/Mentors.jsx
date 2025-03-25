@@ -11,7 +11,7 @@ const Mentors = () => {
       <div className="row mt-4 gy-4">
         <div className="col-md-4">
           <div className="card shadow-sm p-3 text-center">
-            <img src="/john.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
+            <img src="/mentor1.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
             <h5 className="fw-bold mt-3">John Doe</h5>
             <p className="text-muted">Software Engineer at Google</p>
             <button className="btn btn-primary">View Profile</button>
@@ -19,9 +19,9 @@ const Mentors = () => {
         </div>
         <div className="col-md-4">
           <div className="card shadow-sm p-3 text-center">
-            <img src="/jane.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
+            <img src="/mentor2.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
             <h5 className="fw-bold mt-3">Jane Smith</h5>
-            <p className="text-muted">Data Scientist at Microsoft</p>
+            <p className="text-muted">Professional Coach</p>
             <button className="btn btn-primary">View Profile</button>
           </div>
         </div>
@@ -29,7 +29,7 @@ const Mentors = () => {
           <div className="card shadow-sm p-3 text-center">
             <img src="/mentor3.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
             <h5 className="fw-bold mt-3">Alex Brown</h5>
-            <p className="text-muted">Marketing Specialist at Amazon</p>
+            <p className="text-muted">Cardiologist</p>
             <button className="btn btn-primary">View Profile</button>
           </div>
         </div>
