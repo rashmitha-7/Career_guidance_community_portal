@@ -11,6 +11,8 @@ import Footer from "./components/Footer";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import ForgotPassword from "./components/ForgotPassword";
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -25,10 +27,13 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/mentors" element={<Mentors />} />
           <Route path="/library" element={<Library />} />
+         
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/forgot-password" element={<ForgotPassword/>  } />         
+          <Route path="/forgot-password" element={<ForgotPassword/>  } />  
+       
+       
         </Routes>
       </div>
       

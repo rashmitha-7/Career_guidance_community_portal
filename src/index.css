@@ -1,0 +1,9 @@
+.hover-details {
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+  
+  .card:hover .hover-details {
+    opacity: 1;
+  }
+  
