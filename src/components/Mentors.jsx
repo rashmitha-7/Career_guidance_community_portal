@@ -19,7 +19,7 @@ const Mentors = () => {
         </div>
         <div className="col-md-4">
           <div className="card shadow-sm p-3 text-center">
-            <img src="/mentor2.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
+            <img src="/jane.jpg" className="card-img-top rounded-circle mx-auto" style={{ width: "100px" }} alt="Mentor" />
             <h5 className="fw-bold mt-3">Jane Smith</h5>
             <p className="text-muted">Data Scientist at Microsoft</p>
             <button className="btn btn-primary">View Profile</button>
