@@ -1,139 +1,117 @@
 import React, { useState } from "react";
 
-function Quiz() {
-  // State to track the current question and score
+function CareerQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [score, setScore] = useState(0);
-  const [showScore, setShowScore] = useState(false);
+  const [answers, setAnswers] = useState([]);
+  const [showResult, setShowResult] = useState(false);
+  const [careerScores, setCareerScores] = useState({
+    Engineering: 0,
+    Medical: 0,
+    Mathematics: 0,
+    Agriculture: 0,
+    Sports: 0,
+    Government: 0,
+  });
 
-  // Career-related quiz questions
   const questions = [
     {
-      questionText: "What is considered the most important skill in communication?",
-      answerOptions: [
-        { answerText: "Speaking", isCorrect: false },
-        { answerText: "Listening", isCorrect: true },
-        { answerText: "Writing", isCorrect: false },
-        { answerText: "Presentation", isCorrect: false },
-      ],
+      questionText: "What type of problem do you enjoy solving the most?",
+      options: {
+        Engineering: "Designing and building machines or structures",
+        Medical: "Diagnosing and treating diseases",
+        Mathematics: "Solving math puzzles and logical problems",
+        Agriculture: "Improving farming techniques and crop production",
+        Sports: "Training for physical endurance and competing",
+        Government: "Solving social and administrative issues",
+      },
     },
     {
-      questionText: "Which of these is a key factor in choosing a career path?",
-      answerOptions: [
-        { answerText: "Your strengths and interests", isCorrect: true },
-        { answerText: "Peer pressure", isCorrect: false },
-        { answerText: "Popular trends", isCorrect: false },
-        { answerText: "Parental expectations", isCorrect: false },
-      ],
+      questionText: "What kind of environment do you prefer to work in?",
+      options: {
+        Engineering: "Labs, offices, or construction sites",
+        Medical: "Hospitals and clinics",
+        Mathematics: "Research institutions or classrooms",
+        Agriculture: "Farms, fields, or agribusiness settings",
+        Sports: "Stadiums, sports arenas, or training centers",
+        Government: "Government offices or policymaking spaces",
+      },
     },
     {
-      questionText: "What is the STAR method commonly used for in interviews?",
-      answerOptions: [
-        { answerText: "Behavioral questions", isCorrect: true },
-        { answerText: "Technical questions", isCorrect: false },
-        { answerText: "Salary negotiation", isCorrect: false },
-        { answerText: "Ice-breaking", isCorrect: false },
-      ],
+      questionText: "How do you feel about working with people?",
+      options: {
+        Engineering: "I prefer working with machines, technology, or software",
+        Medical: "I enjoy direct interaction with people and helping them",
+        Mathematics: "I prefer working independently with numbers and theories",
+        Agriculture: "I like working with farmers, animals, and nature",
+        Sports: "I enjoy teamwork and competing with others",
+        Government: "I like influencing decisions that affect society",
+      },
     },
     {
-      questionText: "Which of the following is a key benefit of networking?",
-      answerOptions: [
-        { answerText: "Building industry relationships", isCorrect: true },
-        { answerText: "Getting promoted", isCorrect: false },
-        { answerText: "Improving technical skills", isCorrect: false },
-        { answerText: "Increasing salary", isCorrect: false },
-      ],
+      questionText: "Which subject interests you the most?",
+      options: {
+        Engineering: "Physics, technology, and design",
+        Medical: "Biology and human anatomy",
+        Mathematics: "Mathematics and problem-solving",
+        Agriculture: "Environmental science and agriculture",
+        Sports: "Physical education and sports training",
+        Government: "Political science and law",
+      },
     },
     {
-      questionText: "What does a professional portfolio typically showcase?",
-      answerOptions: [
-        { answerText: "Work samples and achievements", isCorrect: true },
-        { answerText: "Social media profiles", isCorrect: false },
-        { answerText: "Personal hobbies", isCorrect: false },
-        { answerText: "Travel experiences", isCorrect: false },
-      ],
-    },
-    {
-      questionText: "Which is the best strategy for long-term career growth?",
-      answerOptions: [
-        { answerText: "Continuous learning and development", isCorrect: true },
-        { answerText: "Sticking with one job for life", isCorrect: false },
-        { answerText: "Switching jobs frequently", isCorrect: false },
-        { answerText: "Avoiding challenges", isCorrect: false },
-      ],
-    },
-    {
-      questionText: "Which soft skill is essential for teamwork?",
-      answerOptions: [
-        { answerText: "Collaboration", isCorrect: true },
-        { answerText: "Self-reliance", isCorrect: false },
-        { answerText: "Independence", isCorrect: false },
-        { answerText: "Solitude", isCorrect: false },
-      ],
-    },
-    {
-      questionText: "What should you research before a job interview?",
-      answerOptions: [
-        { answerText: "The company’s history and culture", isCorrect: true },
-        { answerText: "The salary of the interviewer", isCorrect: false },
-        { answerText: "Your interviewer’s hobbies", isCorrect: false },
-        { answerText: "The location of other candidates", isCorrect: false },
-      ],
-    },
-    {
-      questionText: "Which of these is a key factor in effective time management?",
-      answerOptions: [
-        { answerText: "Prioritizing tasks", isCorrect: true },
-        { answerText: "Working without breaks", isCorrect: false },
-        { answerText: "Ignoring deadlines", isCorrect: false },
-        { answerText: "Multitasking on everything", isCorrect: false },
-      ],
+      questionText: "How much time are you willing to invest in education and training?",
+      options: {
+        Engineering: "4-5 years of technical study",
+        Medical: "7-10 years for medical school and specialization",
+        Mathematics: "3-5 years for research and problem-solving",
+        Agriculture: "3-4 years for agricultural sciences or practical training",
+        Sports: "Years of physical training and competitions",
+        Government: "Years of preparation for government exams",
+      },
     },
   ];
 
-  // Function to handle answer selection
-  const handleAnswerOptionClick = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-    }
+  const handleAnswer = (career) => {
+    setCareerScores((prevScores) => ({
+      ...prevScores,
+      [career]: prevScores[career] + 1,
+    }));
 
+    setAnswers([...answers, career]);
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
-      setShowScore(true);
+      setShowResult(true);
     }
   };
 
+  const getCareerRecommendation = () => {
+    return Object.keys(careerScores).reduce((a, b) => (careerScores[a] > careerScores[b] ? a : b));
+  };
+
   return (
-    <div className="container mt-5">
-      {showScore ? (
-        <div className="score-section">
-          <h2>You scored {score} out of {questions.length}</h2>
+    <div className="container mt-5 text-center">
+      {showResult ? (
+        <div className="result-section">
+          <h2>Your recommended career path is: {getCareerRecommendation()}</h2>
         </div>
       ) : (
-        <div>
-          <h3 className="mb-4">Career Quiz</h3>
-          <div className="question-section">
-            <div className="question-text">
-              {questions[currentQuestion].questionText}
-            </div>
-          </div>
-          <div className="answer-section mt-3">
-            {questions[currentQuestion].answerOptions.map((option, index) => (
-              <button
-                key={index}
-                className="btn btn-outline-primary m-2"
-                onClick={() => handleAnswerOptionClick(option.isCorrect)}
-              >
-                {option.answerText}
-              </button>
-            ))}
-          </div>
+        <div className="quiz-section">
+          <h3 className="mb-4">{questions[currentQuestion].questionText}</h3>
+          {Object.entries(questions[currentQuestion].options).map(([career, text], index) => (
+            <button
+              key={index}
+              className="btn btn-outline-primary m-2"
+              onClick={() => handleAnswer(career)}
+            >
+              {text}
+            </button>
+          ))}
         </div>
       )}
     </div>
   );
 }
 
-export default Quiz;
+export default CareerQuiz;
