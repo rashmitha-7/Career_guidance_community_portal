@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Dashboard from "./components/Dashboard";
 import Mentors from "./components/Mentors";
+import MentorDetail from "./components/MentorDetail";
 import Library from "./components/Library";
 import Quiz from "./components/Quiz";
 import Navbar from "./components/Navbar";
@@ -11,9 +12,6 @@ import Footer from "./components/Footer";
 import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import ForgotPassword from "./components/ForgotPassword";
-<<<<<<< HEAD
-
-=======
 import Engineering from "./components/Engineering";
 import Medical from "./components/Medical";
 import Science from "./components/Science";
@@ -22,7 +20,6 @@ import Economics from "./components/Economics";
 import Sports from "./components/Sports";
 import Food from "./components/Food";
 import Government from "./components/Government";
->>>>>>> 1290a8c (Made some improvements)
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -38,28 +35,22 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/mentors" element={<Mentors />} />
+          <Route path="/mentor/:id" element={<MentorDetail />} />
           <Route path="/library" element={<Library />} />
-<<<<<<< HEAD
-         
-=======
-          <Route path="/engineering" element={<Engineering />} />
-          <Route path="/medical" element={<Medical />} />
-        <Route path="/science" element={<Science />} />
-        <Route path="/mathematics" element={<Mathematics />} />
-        <Route path="/economics" element={<Economics />} />
-        <Route path="/sports" element={<Sports />} />
-        <Route path="/food" element={<Food />} />
-        <Route path="/government" element={<Government />} />
->>>>>>> 1290a8c (Made some improvements)
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/forgot-password" element={<ForgotPassword/>  } />  
-       
-       
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/engineering" element={<Engineering />} />
+          <Route path="/medical" element={<Medical />} />
+          <Route path="/science" element={<Science />} />
+          <Route path="/mathematics" element={<Mathematics />} />
+          <Route path="/economics" element={<Economics />} />
+          <Route path="/sports" element={<Sports />} />
+          <Route path="/food" element={<Food />} />
+          <Route path="/government" element={<Government />} />
         </Routes>
       </div>
-      
       <Footer />
     </Router>
   );
