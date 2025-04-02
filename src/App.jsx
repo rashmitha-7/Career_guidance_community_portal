@@ -37,6 +37,14 @@ function App() {
           <Route path="/mentors" element={<Mentors />} />
           <Route path="/mentor/:id" element={<MentorDetail />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/engineering" element={<Engineering />} />
+          <Route path="/medical" element={<Medical />} />
+        <Route path="/science" element={<Science />} />
+        <Route path="/mathematics" element={<Mathematics />} />
+        <Route path="/economics" element={<Economics />} />
+        <Route path="/sports" element={<Sports />} />
+        <Route path="/food" element={<Food />} />
+        <Route path="/government" element={<Government />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
