@@ -14,7 +14,7 @@ export function Navbar() {
             <li className="nav-item"><a className="nav-link" href="/quiz">Quiz</a></li>
             <li className="nav-item"><a className="nav-link" href="/profile">Profile</a></li>
             <li className="nav-item"><a className="nav-link" href="/login">Login</a></li>
-            <li className="nav-item"><a className="btn btn-light" href="/signup">Signup</a></li>
+            <li className="nav-item"><a className="nav-link" href="/signup">Signup</a></li>
           </ul>
         </div>
       </div>
