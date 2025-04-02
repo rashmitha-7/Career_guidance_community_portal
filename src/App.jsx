@@ -20,6 +20,11 @@ import Economics from "./components/Economics";
 import Sports from "./components/Sports";
 import Food from "./components/Food";
 import Government from "./components/Government";
+import CareerCounseling from "./components/CareerCounseling";
+import JobListings from "./components/JobListings";
+import ExplorePrograms from "./components/ExplorePrograms";
+import ResumeBuilder from "./components/ResumeBuilder";
+import DiscussionForum from "./components/DiscussionForum";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -49,6 +54,13 @@ function App() {
           <Route path="/sports" element={<Sports />} />
           <Route path="/food" element={<Food />} />
           <Route path="/government" element={<Government />} />
+          <Route path="/counseling" element={<CareerCounseling />} />
+          <Route path="/jobs" element={<JobListings />} />
+          <Route path="/skills" element={<ExplorePrograms />} />
+        
+
+          <Route path="/resume" element={<ResumeBuilder />} />
+          <Route path="/forum" element={<DiscussionForum />} />
         </Routes>
       </div>
       <Footer />
