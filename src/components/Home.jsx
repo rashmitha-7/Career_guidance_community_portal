@@ -23,13 +23,37 @@ const Home = () => {
       </div>
 
       {/* Career Path Section */}
+      
+
+      {/* Career Options Section */}
+      <div className="mt-5 p-4 bg-white rounded shadow">
+        <h2 className="fw-bold">Explore Career Options</h2>
+        <p className="text-muted">Choose a career path that suits your education level and interests.</p>
+        <div className="row">
+          <div className="col-md-4">
+            <h4>For School Students</h4>
+            <p>Discover foundational career paths, skill-building opportunities, and future career possibilities.</p>
+            <Link to="/career-school" className="btn btn-primary">Explore</Link>
+          </div>
+          <div className="col-md-4">
+            <h4>For Intermediate Students</h4>
+            <p>Find suitable higher education options and career guidance for stream selection.</p>
+            <Link to="/career-intermediate" className="btn btn-primary">Explore</Link>
+          </div>
+          <div className="col-md-4">
+            <h4>For Higher Career Options</h4>
+            <p>Learn about professional degrees, certifications, and industry trends.</p>
+            <Link to="/career-higher" className="btn btn-primary">Explore</Link>
+          </div>
+        </div>
+      </div>
       <div className="mt-5 p-4 bg-light rounded">
         <h2 className="fw-bold">Know more about <span className="text-primary">Your Career Path</span></h2>
         <p className="text-muted">
           Our conceptual career assistance framework is based on cognitive behavioral theory
           that helps you find the accurate career match.
         </p>
-        <Link to="/library" className="btn btn-dark">Learn More</Link>
+        <Link to="/Library" className="btn btn-dark">Learn More</Link>
       </div>
     </div>
   );
