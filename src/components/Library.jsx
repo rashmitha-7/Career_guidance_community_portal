@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Container, Row, Col, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./Library.css"; // Import CSS file for animations
 
 const Library = () => {
   const categories = [
@@ -15,7 +16,7 @@ const Library = () => {
   ];
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 fade-in">
       <h2 className="text-center mb-4">Career Library</h2>
       <div className="d-flex justify-content-center mb-4">
         <Form.Control
@@ -27,9 +28,9 @@ const Library = () => {
       <Row>
         {categories.map((category, index) => (
           <Col md={3} key={index} className="mb-4">
-            <Card className="text-center">
+            <Card className="text-center card-hover">
               <Link to={category.path} style={{ textDecoration: "none", color: "inherit" }}>
-                <Card.Img variant="top" src={category.img} alt={category.name} />
+                <Card.Img variant="top" src={category.img} alt={category.name} className="category-img" />
                 <Card.Body>
                   <Card.Title>{category.name}</Card.Title>
                 </Card.Body>

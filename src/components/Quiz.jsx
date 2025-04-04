@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CareerQuiz() {
+function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showResult, setShowResult] = useState(false);
@@ -114,4 +114,4 @@ function CareerQuiz() {
   );
 }
 
-export default CareerQuiz;
+export default Quiz;

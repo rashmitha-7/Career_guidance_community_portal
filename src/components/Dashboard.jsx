@@ -52,7 +52,7 @@ function Dashboard() {
       <section className="discussion-forums card p-3">
         <h3>Discussion Forums</h3>
         <p>Engage in discussions and seek advice from professionals.</p>
-        <button className="btn btn-outline-primary" onClick={() => navigate("/forums")}>Join Forums</button>
+        <button className="btn btn-outline-primary" onClick={() => navigate("/join-forum")}>Join Forums</button>
       </section>
     </div>
   );

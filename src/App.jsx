@@ -25,9 +25,21 @@ import JobListings from "./components/JobListings";
 import ExplorePrograms from "./components/ExplorePrograms";
 import ResumeBuilder from "./components/ResumeBuilder";
 import DiscussionForum from "./components/DiscussionForum";
+import CareerSchool from "./components/CareerSchool";
+import CareerIntermediate from "./components/CareerIntermediate";
+import CareerHigher from "./components/CareerHigher";
+import Certifications from "./components/Certifications";
+import DiscoverMore from "./components/DiscoverMore";
+import JoinForum from "./components/JoinForum";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
+
+
+
+
+
 
 function App() {
   return (
@@ -57,10 +69,15 @@ function App() {
           <Route path="/counseling" element={<CareerCounseling />} />
           <Route path="/jobs" element={<JobListings />} />
           <Route path="/skills" element={<ExplorePrograms />} />
-        
-
           <Route path="/resume" element={<ResumeBuilder />} />
           <Route path="/forum" element={<DiscussionForum />} />
+          <Route path="/career-school" element={<CareerSchool />} />
+          <Route path="/career-intermediate" element={<CareerIntermediate />} />
+          <Route path="/career-higher" element={<CareerHigher />} />
+          <Route path="/certifications" element={<Certifications />} />
+          <Route path="/discover-more" element={<DiscoverMore />} />
+          <Route path="/join-forum" element={<JoinForum />} />
+
         </Routes>
       </div>
       <Footer />
